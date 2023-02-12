@@ -1,0 +1,7 @@
+export {default as Navbar} from './Navbar'
+export {default as Layout} from './Layout'
+export {default as HeroSection} from './HeroSection'
+export {default as Footer} from './Footer'
+export {default as NewsArticle} from './NewsArticle'
+export {default as SampleNews} from './SampleNews'
+export {default as About} from '../pages/about'
