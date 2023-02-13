@@ -20,7 +20,7 @@ const SampleNews = ({allPostsData}: Props) => {
                   Latest
               </h1>
               <div className=" relative w-full grid grid-cols-1 md:grid-cols-3 gap-5 my-8">
-                  {allPostsData.map((post) => (
+                  {allPostsData.slice(0, 3).map((post) => (
                       <NewsArticle key={post.id} post={post} />
                   ))}
 

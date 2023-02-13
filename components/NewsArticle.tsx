@@ -18,11 +18,11 @@ const NewsArticle = ({post}: Props) => {
     return (
         <Link href={`/posts/${post.id}`}>
             <div className="h-full relative shadow-lg rounded-lg">
-                <div className="">
+                <div className="h-60">
                     <img
                         src={post.image}
                         alt=""
-                        className="w-full h-auto rounded-t-lg"
+                        className="w-full h-full rounded-t-lg"
                     />
                 </div>
                 <div className="relative py-3 px-2">

@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components{
+    .active-route {
+        @apply px-3 py-2 text-sm font-medium bg-[#f43f5e] text-white rounded-md
+    }
     .blog-content h1 {
         @apply text-4xl font-bold mb-4  text-gray-700
     }
@@ -19,7 +22,7 @@
         @apply text-xl text-gray-900 mb-5
     }
     .blog-content ul{
-        @apply pl-6 list-disc mb-3
+        @apply pl-6 list-disc mb-3 marker:text-[#f43f5e]
     }
 
 }

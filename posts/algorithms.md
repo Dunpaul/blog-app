@@ -1,7 +1,7 @@
 ---
 title: 'Master JavaScript Algorithms'
-date: '2023-02-04'
-image: '/images/career.jpg'
+date: '2023-02-08'
+image: '/images/javascript.jpg'
 ---
 
 

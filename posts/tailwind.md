@@ -1,7 +1,7 @@
 ---
-title: 'How to Crack your interview'
-date: '2023-02-02'
-image: '/images/interview.jpg'
+title: 'Learn tailwind css'
+date: '2023-02-10'
+image: '/images/tailwind.jpg'
 ---
 
 

@@ -1,8 +1,11 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Link from "next/link";
 import {Bars4Icon} from "@heroicons/react/20/solid";
+import {useRouter} from "next/router";
 
 const Navbar = () => {
+    const router = useRouter();
+    const currentRoute = router.pathname;
 
     const toggler = () => {
         let nav_bar = document.getElementById('mobile-menu');
@@ -36,17 +39,18 @@ const Navbar = () => {
                         <div className="hidden sm:ml-6 sm:block  justify-end" id="large-screen-menu">
                             <div className="flex space-x-4">
 
-                                <Link href="/" className="bg-[#f43f5e] text-white px-3 py-2 rounded-md text-sm font-medium"
+                                <Link href="/"
+                                      className={currentRoute === '/' ? 'active-route' : 'text-gray-500 hover:bg-[#f43f5e] hover:text-white px-3 py-2 rounded-md text-sm font-medium'}
                                    aria-current="page">Home</Link>
 
                                 <Link href="/about"
-                                      className="text-gray-500 hover:bg-[#f43f5e] hover:text-white px-3 py-2 rounded-md text-sm font-medium">About us</Link>
+                                      className={currentRoute === '/about' ? 'active-route' : 'text-gray-500 hover:bg-[#f43f5e] hover:text-white px-3 py-2 rounded-md text-sm font-medium'}>About us</Link>
 
                                 <Link href="/posts/NewsArticles"
-                                   className="text-gray-500 hover:bg-[#f43f5e] hover:text-white px-3 py-2 rounded-md text-sm font-medium">Articles</Link>
+                                   className={currentRoute === '/posts/NewsArticles' ? 'active-route' : 'text-gray-500 hover:bg-[#f43f5e] hover:text-white px-3 py-2 rounded-md text-sm font-medium'}>Articles</Link>
 
                                 <Link href="/careers"
-                                   className="text-gray-500 hover:bg-[#f43f5e] hover:text-white px-3 py-2 rounded-md text-sm font-medium">Careers</Link>
+                                   className={currentRoute === '/careers' ? 'active-route' : 'text-gray-500 hover:bg-[#f43f5e] hover:text-white px-3 py-2 rounded-md text-sm font-medium'}>Careers</Link>
 
                                 {/*<Link href="#"*/}
                                 {/*      className="text-gray-500 hover:bg-[#f43f5e] hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contacts</Link>*/}
@@ -59,23 +63,24 @@ const Navbar = () => {
 
             <div className="hidden" id="mobile-menu">
                 <div className="space-y-1 px-2 pb-3">
-                    <Link href="/" className="bg-[#f43f5e] text-white block px-3 py-2 rounded-md text-base font-medium"
+                    <Link href="/"
+                          className={currentRoute === '/' ? 'bg-[#f43f5e] text-white block px-3 py-2 rounded-md text-base font-medium"' : "text-gray-500 hover:bg-[#f43f5e] hover:text-white block px-3 py-2 rounded-md text-base font-medium"}
                           aria-current="page">
                         Home
                     </Link>
 
                     <Link href="/about"
-                          className="text-gray-500 hover:bg-[#f43f5e] hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                          className={currentRoute === '/about' ? 'bg-[#f43f5e] text-white block px-3 py-2 rounded-md text-base font-medium"' : "text-gray-500 hover:bg-[#f43f5e] hover:text-white block px-3 py-2 rounded-md text-base font-medium"}>
                         About Us
                     </Link>
 
                     <Link href="/posts/NewsArticles"
-                          className="text-gray-500 hover:bg-[#f43f5e] hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                          className={currentRoute === '/posts/NewsArticles' ? 'bg-[#f43f5e] text-white block px-3 py-2 rounded-md text-base font-medium"' : "text-gray-500 hover:bg-[#f43f5e] hover:text-white block px-3 py-2 rounded-md text-base font-medium"}>
                         Articles
                     </Link>
 
                     <Link href="/careers"
-                          className="text-gray-500 hover:bg-[#f43f5e] hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                          className={currentRoute === '/careers' ? 'bg-[#f43f5e] text-white block px-3 py-2 rounded-md text-base font-medium"' : "text-gray-500 hover:bg-[#f43f5e] hover:text-white block px-3 py-2 rounded-md text-base font-medium"}>
                         Careers
                     </Link>
                 </div>

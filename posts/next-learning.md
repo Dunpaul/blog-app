@@ -1,7 +1,7 @@
 ---
 title: 'How to learn NextJS'
-date: '2023-02-03'
-image: '/images/career.jpg'
+date: '2023-02-09'
+image: '/images/next.jpg'
 ---
 
 
