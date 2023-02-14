@@ -98,7 +98,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 | `blog-app`   | This is the root folder of the project                                                                          |
 | `components` | Contains TypeScript files which are the respective UI components for the application                            |
 | `lib`        | Contains a TypeScript file  which fetches the blog and supporting content of the application                    |
-| `pages`      | Contains tha TypeScript files which are the respective pages for the application                                |
+| `pages`      | Contains TypeScript files which are the respective pages for the application                                |
 | `public`     | Contains resources which are accessible throughout the application such as images, favicon, etc                 |
 | `styles`     | Contains a `global.css` file which contains the tailwind directives which define the styling of the application |
 
