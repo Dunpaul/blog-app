@@ -2,6 +2,7 @@
 title: 'Learn tailwind css'
 date: '2023-02-10'
 image: '/images/tailwind.jpg'
+author: 'Wright Bright'
 ---
 
 

@@ -2,6 +2,7 @@
 title: 'Accepting payments'
 date: '2023-02-13'
 image: '/images/payment.jpg'
+author: 'Wright Bright'
 ---
 
 

@@ -2,6 +2,7 @@
 title: 'How to learn NextJS'
 date: '2023-02-09'
 image: '/images/next.jpg'
+author: 'Wright Bright'
 ---
 
 

@@ -2,6 +2,7 @@
 title: 'How to Crack your interview'
 date: '2023-02-02'
 image: '/images/interview.jpg'
+author: 'Wright Bright'
 ---
 
 

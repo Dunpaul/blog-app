@@ -2,6 +2,7 @@
 title: 'Learn bootstrap'
 date: '2023-02-12'
 image: '/images/bootsrap.jpg'
+author: 'Wright Bright'
 ---
 
 

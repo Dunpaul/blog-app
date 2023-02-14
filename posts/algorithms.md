@@ -2,6 +2,7 @@
 title: 'Master JavaScript Algorithms'
 date: '2023-02-08'
 image: '/images/javascript.jpg'
+author: 'Wright Bright'
 ---
 
 
