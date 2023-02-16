@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import Link from "next/link";
 import {Bars4Icon} from "@heroicons/react/20/solid";
 import {useRouter} from "next/router";
@@ -49,11 +49,13 @@ const Navbar = () => {
                                 <Link href="/posts/NewsArticles"
                                    className={currentRoute === '/posts/NewsArticles' ? 'active-route' : 'text-gray-500 hover:bg-[#f43f5e] hover:text-white px-3 py-2 rounded-md text-sm font-medium'}>Articles</Link>
 
+                                <Link href="/authors"
+                                      className={currentRoute === '/authors' ? 'active-route' : 'text-gray-500 hover:bg-[#f43f5e] hover:text-white px-3 py-2 rounded-md text-sm font-medium'}>Authors</Link>
+
                                 <Link href="/careers"
                                    className={currentRoute === '/careers' ? 'active-route' : 'text-gray-500 hover:bg-[#f43f5e] hover:text-white px-3 py-2 rounded-md text-sm font-medium'}>Careers</Link>
 
-                                {/*<Link href="#"*/}
-                                {/*      className="text-gray-500 hover:bg-[#f43f5e] hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contacts</Link>*/}
+
                             </div>
                         </div>
                     </div>
@@ -77,6 +79,11 @@ const Navbar = () => {
                     <Link href="/posts/NewsArticles"
                           className={currentRoute === '/posts/NewsArticles' ? 'bg-[#f43f5e] text-white block px-3 py-2 rounded-md text-base font-medium"' : "text-gray-500 hover:bg-[#f43f5e] hover:text-white block px-3 py-2 rounded-md text-base font-medium"}>
                         Articles
+                    </Link>
+
+                    <Link href="/authors"
+                          className={currentRoute === '/authors' ? 'bg-[#f43f5e] text-white block px-3 py-2 rounded-md text-base font-medium"' : "text-gray-500 hover:bg-[#f43f5e] hover:text-white block px-3 py-2 rounded-md text-base font-medium"}>
+                        Authors
                     </Link>
 
                     <Link href="/careers"

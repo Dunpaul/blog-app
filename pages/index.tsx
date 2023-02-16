@@ -6,19 +6,26 @@ import SampleNews from "@/components/SampleNews";
 import { getSortedPostsData } from '@/lib/posts'
 import {GetStaticProps} from "next";
 import React from "react";
+import {getHomeData, getSortedHomeData} from "@/lib/home";
 
 interface Post {
     title: string;
     date: string;
     id: string;
     image: string;
+    author: string;
 }
-
+interface HeroData {
+    title: string;
+    introduction:string;
+    contentHtml: string;
+}
 type Props = {
     allPostsData: Post[];
+    heroData: HeroData
 }
 
-const Home =({allPostsData}:Props) => {
+const Home =({allPostsData, heroData}:Props) => {
     return (
     <>
       <Head>
@@ -27,7 +34,7 @@ const Home =({allPostsData}:Props) => {
           </title>
       </Head>
         <section className='container mx-auto max-w-7xl px-6 lg:px-8 mb-10'>
-            <HeroSection />
+            <HeroSection heroData={heroData} />
         </section>
 
         <section className="container mx-auto max-w-7xl px-6 lg:px-8 mb-10">
@@ -42,8 +49,13 @@ export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
     const allPostsData = getSortedPostsData();
+    const allHeroData = getSortedHomeData()
+    const heroData = await getHomeData();
+
     return {
         props: {
+            heroData,
+            allHeroData,
             allPostsData,
         },
         revalidate: 10,

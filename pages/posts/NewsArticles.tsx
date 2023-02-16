@@ -10,6 +10,7 @@ interface Post {
     date: string;
     id: string;
     image: string;
+    author:string;
 }
 
 type Props = {

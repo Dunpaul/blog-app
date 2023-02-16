@@ -8,28 +8,27 @@ import remarkParse from "remark-parse";
 //get the location of where the files are stored
 const postsDirectory = path.join(process.cwd(), 'posts')
 
-console.log(postsDirectory)
+// console.log(postsDirectory)
 
 // fetching and sorting the post data
 export function getSortedPostsData() {
 //    Get the file names
     const fileNames = fs.readdirSync(postsDirectory);
     const allPostsData = fileNames.map((fileName) => {
-    //    remove the '.md' extension from the file name to get id
+        //remove the '.md' extension from the file name to get id
         const id = fileName.replace(/\.md$/, '')
 
-    //    read the markdown file as a string
+        //read the markdown file as a string
         const fullPath = path.join(postsDirectory, fileName);
         const fileContents = fs.readFileSync(fullPath, 'utf8');
 
 
-    //    parse the post metadata section
+        //    parse the post metadata section
         const matterResult = matter(fileContents);
-
-    //    combine the data with the id
+        //    combine the data with the id
         return {
             id,
-            ...(matterResult.data as {date: string; title: string})
+            ...(matterResult.data as {date: string; title: string; image:string; author: string})
         };
     });
 
@@ -73,6 +72,6 @@ export async function getPostData(id:string) {
     return {
         id,
         contentHtml,
-        ...(matterResult.data as { date: string; title: string })
+        ...(matterResult.data as { date: string; title: string; image:string; author:string })
     }
 }

@@ -9,7 +9,9 @@ The project strongly uses [TypeScript](https://www.typescriptlang.org/) syntax a
 
 ## Project Composition
 
-The project has a `Home` page, an `About us` page, an `Articles` page, an `Authors` page and `Careers` page.  The pages fetch their content from the `supporting` and `posts` directories located in the `root` directory of the project. The `supporting` and `posts` directories contain markdown files for respective sections and pages except for an intended error page which in this case is the `Careers` page.The `Careers` page is used to demonstrate a `404-page not found` error page. It is a custom error page that is located in the `pages` directory. A custom `500-server error` page is also included in the `pages` directory.
+The project has a `Home` page, an `About us` page, an `Articles` page, an `Authors` page and `Careers` page.  The pages fetch their content from respective folders; `Home` page  from `home` directory, `About us` page from `about` directory and `posts` from the `posts` directory located in the `root` directory of the project. The `home`, `about` and `posts` directories contain markdown files for respective sections and pages except for intended error pages; `Authors` page and `Careers` page. The `Authors` page is used to demonstrate a `500 - server error ` page, while the `Careers` page is used to demonstrate a `404-page not found` error page. They are custom error pages that are located in the `pages` directory. 
+
+> Note: When you navigate to the `Authors` page you will see the default `Next.js` error page since the app is in development mode.
 
 ## Getting Started
 
@@ -63,22 +65,34 @@ To add or update the blog content of the application;
     ```
  - Save the file and reload the application to view new changes
    
-To modify the application's supporting pages and sections;
- - Navigate to the `supporting` directory in the `root` folder of the application
- - Edit any of the respective markdown files to your liking to update the supporting content of the application. For example, if you want to change the content in the hero section open the `hero.md` file and change its content as follows
+To modify or update the application's `Home` page (hero section);
+ - Navigate to the `home` directory in the `root` folder of the application
+ - Edit `hero.md` markdown file's content to your liking to update the hero section's content of the application.
     ```markdown
-      ---
-      site_name: 'Change this'
-      site_intro: 'Change this'
-      site_tagline: 'Change this
-      ---
+     ---
+        title: 'Change this'
+        introduction: 'Change this'
+     ---
+     Hero Section's content
    ```
 - Save the file and reload the application to view new changes
 
+To modify or update the application's `About us` page hero section;
+- Navigate to the `about` directory in the `root` folder of the application
+- Edit `about.md` markdown file's content to your liking to update the hero section's content of the application.
+   ```markdown
+    ---
+       title: 'Change this'
+       date: 'Change this'
+       image: 'update-the-relevant-image-path'
+    ---
+    About us Section's content
+  ```
+- Save the file and reload the application to view new changes
 
-> NOTE: Do not add any of the files in the `supporting` directory as you won't see any changes
+> NOTE: Do not add any of the files in the `home` and `about` directories as you won't see any changes
 
-> NOTE:Do not delete any files in the `supporting` directory. Deleting any files in the `supporting` directory would cause the application to break down
+> NOTE:Do not delete any files in the `home` and `about` directories. Deleting any files in the `home` and `about` directories would cause the application to break down
 
 
 ## Further Development
@@ -93,14 +107,18 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Directories Description
 
-| Directory    | Description                                                                                                     |
-|--------------|-----------------------------------------------------------------------------------------------------------------|
-| `blog-app`   | This is the root folder of the project                                                                          |
-| `components` | Contains TypeScript files which are the respective UI components for the application                            |
-| `lib`        | Contains a TypeScript file  which fetches the blog and supporting content of the application                    |
-| `pages`      | Contains TypeScript files which are the respective pages for the application                                |
-| `public`     | Contains resources which are accessible throughout the application such as images, favicon, etc                 |
-| `styles`     | Contains a `global.css` file which contains the tailwind directives which define the styling of the application |
+| Directory    | Description                                                                                                                      |
+|--------------|----------------------------------------------------------------------------------------------------------------------------------|
+| `blog-app`   | This is the root folder of the project                                                                                           |
+| `about`      | Contains a markdown file which contains the information for `About us` page                                                      |
+| `components` | Contains TypeScript files which are the respective UI components for the application                                             |
+| `home`       | Contains a markdown file which contains the information for `Home` page                                                          |
+| `lib`        | Contains `about.ts`, `home.ts` and `posts.ts` TypeScript files which fetches the about, home and blog content of the application |
+| `pages`      | Contains TypeScript files which are the respective pages for the application                                                     |
+| `public`     | Contains resources which are accessible throughout the application such as images, favicon, etc                                  |
+| `posts`      | Contains Markdown files for respective blog articles in the application                                                          |
+| `public`     | Contains resources that can be accessed throughout the application                                                               |
+| `styles`     | Contains a `global.css` file which contains the tailwind directives which define the styling of the application                  |
 
 ## Learn More
 
