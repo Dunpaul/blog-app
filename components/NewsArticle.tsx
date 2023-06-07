@@ -2,6 +2,7 @@ import React from 'react'
 import Link from "next/link";
 import {GetStaticPaths, GetStaticProps} from "next";
 import {getAllPostIds, getPostData} from "@/lib/posts";
+import Image from 'next/image'
 
 interface Post {
     title: string;
@@ -19,10 +20,12 @@ const NewsArticle = ({post}: Props) => {
         <Link href={`/posts/${post.id}`}>
             <div className="h-full relative shadow-lg rounded-lg">
                 <div className="h-60">
-                    <img
+                    <Image
                         src={post.image}
                         alt=""
                         className="w-full h-full rounded-t-lg"
+                        width={400}
+                        height={400}
                     />
                 </div>
                 <div className="relative py-3 px-2">
